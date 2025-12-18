@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../JMG/hv.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="../BOOTSTRAP/css/bootstrap.min.css">
+    <script src="../BOOTSTRAP/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Xem sản phẩm</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0 auto;
+        }
+        body{
+            width: 100%;
+            height: auto;
+            font-family: 'Times New Roman', Times, serif;
+            margin-top: 0px;
+            padding: 0px;
+            top: 0px;
+            background-color: black;
+        }
+        
+        header{
+            margin-top: 0px;
+            height: 150px;
+            width: 100%;
+            top: 0px;
+            background-color: rgba(97, 81, 81, 0.308);
+            box-shadow: 1px 1px 1px;
+        }
+        .header1{
+            text-align: center;
+            color: red;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular';
+            width: 60%;
+            float: left;
+            padding: 0px 0px 0px 90px;
+
+        }
+        .header1 h1{
+            float: right;
+            padding: 10px 10px;
+        }
+        .header1 sub{
+            font-size: 15px;
+            color: green;
+        }
+        .header2 {
+            float: right;
+            font-size: 16px;
+            width: 40%;
+            height: 79px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .header2 ul {
+            list-style: none;
+            display: flex;
+            height: 100%;
+            align-items: center;
+        }
+
+        .header2 ul li {
+            padding: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .header2 .fa {
+            font-size: 25px;
+            color: white;
+            transition: color 0.3s ease;
+        }
+
+        .header2 i {
+            font-size: 30px;
+            color: white;
+        }
+
+        .header2 i:hover {
+            color: #f44336;
+        }
+
+        .user-dropdown {
+            position: relative;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            padding: 10px;
+            min-width: 150px;
+        }
+
+        .dropdown-menu a {
+            color: #333;
+            text-decoration: none;
+            display: block;
+            padding: 5px 0;
+            font-size: 14px;
+        }
+
+        .dropdown-menu a:hover {
+            color: #f44336;
+        }
+
+        .user-dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        .header3 {
+            width: 100%;
+            height: 70px;
+            padding: 0px 430px;
+            float: left;
+
+        }
+
+        .header3 ul {
+            list-style: none;
+            margin: 0;
+            padding-top: 30px;
+            display: flex;
+            height: 100%;
+            padding-left: 10px;
+            text-align: center;
+        }
+
+       
+        .header3 a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 8px 10px;
+            font-size: 20px;
+        }
+
+        .header3 a:hover {
+            color: red;
+        }
+        .header3 li {
+            position: relative;
+        }
+
+        .header3 li .menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: white;
+            padding: 10px;
+            border-radius: 5px;
+            min-width: 150px;
+        }
+
+        .header3 li:hover .menu {
+            display: block;
+        }
+
+        
+        .header3 li .menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: block; 
+        }
+
+        .header3 li .menu ul li {
+            padding: 8px 0;
+        }
+
+        .header3 li .menu ul li a {
+            color: black;
+            text-decoration: none;
+            display: block;
+        }
+
+        .header3 li .menu ul li a:hover {
+            color: red;
+        }
+        footer {
+            color: #000;
+            width: 100%;
+            height: 400px;
+            background-color: #333;
+            padding: 20px 40px;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            color: white;
+            float: left;
+            padding-top: 70px;
+        }
+
+        .footertrong, .hotro, .links {
+            padding: 20px;
+            margin: 10px;
+            box-sizing: border-box;
+        }
+        .hotro a{
+            text-decoration: none;
+            color: white
+        }
+
+        .footertrong {
+            width: 30%;
+            float: left;
+        }
+
+        .hotro {
+            width: 30%;
+            float: left;
+        }
+        .hotro ul{
+            list-style: none;
+        }
+        .links {
+            width: 30%;
+            float: right;
+        }
+
+        .footertrong, .hotro, .links {
+            font-size: 18px;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        .xemdongho {
+            padding-top: 20px;
+            width: 100%;
+            height: 200px;
+ 
+        }
+        .xemdongho img{
+            height: auto;
+            width: auto;
+            padding: 20px 40px;
+        }
+        .product-image {
+            width: 100%;
+            border-radius: 10px;
+            padding: 20px 20px;
+            height: 100%;
+        }
+        .product-details {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .product-title {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .product-price {
+            font-size: 24px;
+            color: #e60000;
+            margin-bottom: 20px;
+        }
+        .product-description {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        .btn-custom {
+            background-color: #28a745;
+            color: white;
+            font-size: 18px;
+            padding: 10px 30px;
+            border-radius: 5px;
+            border: none;
+            transition: background-color 0.3s;
+        }
+        .btn-custom:hover {
+            background-color: #218838;
+        }
+        .cart-icon {
+            position: relative;
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background-color: red;
+            color: white;
+            font-size: 14px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .hotro li a:hover{
+            color: red;
+        }
+        
+    </style>
+
+</head>
+<body>
+    <header>
+        <div>
+            <div class="header1">
+                <h1>DEV VŨ <sub>Since 2005</sub></h1>
+            </div>
+            <div class="header2">
+                <ul>
+                    <li style="display: flex; align-items: center;">
+                        <form id="search-form" onsubmit="searchProduct(); return false;" style="display: flex;">
+                            <input type="text" id="search-input" placeholder="Tìm kiếm..." 
+                                   style="padding: 5px 10px; border-radius: 20px 0 0 20px; border: 1px solid #ccc; outline: none;">
+                            <button type="submit" 
+                                    style="padding: 5px 10px; border: none; background-color: gray; color: white; border-radius: 0 20px 20px 0; cursor: pointer;">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </form>
+                    </li>
+                    <li class="user-dropdown">
+                        <i class="fas fa-user"></i>
+                        <div class="dropdown-menu">
+                            <a href="../HTML/Đangnhap.html">Đăng Nhập</a>
+                            <a href="../HTML/Dangki.html">Đăng kí</a>
+                        </div>
+                    </li>
+                    <li class="cart-icon">
+                        <a href="../HTML/giohang.html"><i class="fas fa-shopping-cart"></i>
+                            <div class="cart-count" id="cart-count">0</div></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="header3">
+            <ul>
+                <li><a href="../HTML/Home.html">TRANG CHỦ</a></li>
+                <li>
+                    <a href="../HTML/Nam.html">NAM</a>
+                    <div class="menu">
+                        <ul>
+                            <li><a href="../HTML/patek1.html">Patek Philippe</a></li>
+                            <li><a href="../HTML/rolex1.html">Rolex</a></li>
+                            <li><a href="../HTML/timex1.html">Timex</a></li>
+                          </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="../HTML/Nu.html">NỮ</a>
+                    <div class="menu">
+                        <ul>
+                            <li><a href="../HTML/patek2.html">Patek Philippe</a></li>
+                            <li><a href="../HTML/rolex2.html">Rolex</a></li>
+                            <li><a href="../HTML/timex2.html">Timex</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="../HTML/SinhVien.html">SINH VIÊN</a>
+                    <div class="menu">
+                        <ul>
+                            <li><a href="../HTML/patek3.html">Patek Philippe</a></li>
+                            <li><a href="../HTML/rolex3.html">Rolex</a></li>
+                            <li><a href="../HTML/timex3.html">Timex</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="../HTML/CaoCap.html">CAO CẤP</a>
+                    <div class="menu">
+                        <ul>
+                            <li><a href="../HTML/patek4.html">Patek Philippe</a></li>
+                            <li><a href="../HTML/rolex4.html">Rolex</a></li>
+                            <li><a href="../HTML/timex4.html">Timex</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="../HTML/REVIEW.HTML">REVIEW</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="xemdongho">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="../JMG/namchay2.jpg" alt="Đồng Hồ Guess Melody" class="product-image">
+            </div>
+            <div class="col-md-6">
+                <div class="product-details">
+                    <h2 class="product-title">Đồng Hồ Guess Melody GW0469L2</h2>
+                    <p class="product-price">1.240.000.000₫</p>
+                    <p class="product-description">Đồng hồ Patek Philippe 5205R-001 Annual Calendar là sản phẩm đồng hồ nam thời trang với thiết kế thanh lịch và hiện đại. Sản phẩm có khả năng chống nước và dây da nâu. </p>
+                    <button class="btn-custom" onclick="addToCart()">Thêm vào giỏ hàng</button>
+                    <button class="btn-custom" onclick="muaNgay('Đồng Hồ Guess Melody GW0469L2', 1240000000)">Mua Ngay</button>
+                </div>
+            </div>
+        </div>
+        
+    <footer>
+        <div class="footer1">
+            <div class="footertrong">
+                <p>© 2025 - 2027 DEV VU <sub>2005</sub></p>
+                <p>MST: 0977742976 - Sở kế hoạch và Đầu tư Trường Đại Học Công Nghiệp TP.HCM</p>
+                <p>Address: Gò Vấp, TP. HCM, Vietnam</p>
+                <p>Email: nguyencongvu2102@gmail.com | Phone: 0977742976</p>
+            </div>
+    
+            <div class="hotro">
+                <h3>Hỗ trợ khách hàng</h3>
+                <ul>
+                    <li><a href="../HTML/hchinhsachthanhtoan.html">Chính sách thanh toán</a></li>
+                    <li><a href="../HTML/chinhsachgiaohang.html">Chính sách giao hàng</a></li>
+                    <li><a href="../HTML/chinhsachdoitra.html">Chính sách đổi trả</a></li>
+                    <li><a href="../HTML/chinhsachbaohanh.html">Chính sách bảo hành</a></li>
+                </ul>
+            </div>
+            <div class="links">
+                <h3>Kết nối với chúng tôi</h3>
+                <a href="https://www.facebook.com" target="_blank">
+                    <i class="fab fa-facebook-square" style="font-size: 30px; margin-right: 10px;"></i>
+                </a>
+                <a href="https://www.instagram.com" target="_blank">
+                    <i class="fab fa-instagram" style="font-size: 30px; margin-right: 10px;"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function muaNgay(ten, gia) {
+          const product = {
+            name: ten,
+            price: gia
+          };
+          localStorage.setItem('product', JSON.stringify(product));
+          window.location.href = 'thanhtoan.html';
+        }
+    </script>
+    <script src="../javascrip/bai3.js"></script>
+</body>
+</html>

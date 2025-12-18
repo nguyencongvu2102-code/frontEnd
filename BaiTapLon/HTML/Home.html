@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../JMG/hv.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="../BOOTSTRAP/css/bootstrap.min.css">
+    <script src="../BOOTSTRAP/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Trang Chủ</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0 auto;
+        }
+        body{
+            width: 100%;
+            height: auto;
+            font-family: 'Times New Roman', Times, serif;
+            margin-top: 0px;
+            padding: 0px;
+            top: 0px;
+            background-color: black;
+        }
+        
+        header{
+            margin-top: 0px;
+            height: 150px;
+            width: 100%;
+            /* position: sticky;
+             position: -webkit-sticky;
+            padding: 0px; */ 
+            top: 0px;
+            background-color: rgba(97, 81, 81, 0.308);
+            box-shadow: 1px 1px 1px;
+        }
+        .header1{
+            text-align: center;
+            color: red;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular';
+            width: 60%;
+            float: left;
+            padding: 0px 0px 0px 90px;
+
+        }
+        .header1 h1{
+            float: right;
+            padding: 10px 10px;
+        }
+        .header1 sub{
+            font-size: 15px;
+            color: green;
+        }
+        .header2 {
+            float: right;
+            font-size: 16px;
+            width: 40%;
+            height: 79px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .header2 ul {
+            list-style: none;
+            display: flex;
+            height: 100%;
+            align-items: center;
+        }
+
+        .header2 ul li {
+            padding: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .header2 .fa {
+            font-size: 25px;
+            color: white;
+            transition: color 0.3s ease;
+        }
+
+        .header2 i {
+            font-size: 30px;
+            color: white;
+        }
+
+        .header2 i:hover {
+            color: #f44336; 
+        }
+
+        .user-dropdown {
+            position: relative;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            padding: 10px;
+            min-width: 150px;
+        }
+
+        .dropdown-menu a {
+            color: #333;
+            text-decoration: none;
+            display: block;
+            padding: 5px 0;
+            font-size: 14px;
+        }
+
+        .dropdown-menu a:hover {
+            color: #f44336;
+        }
+
+        .user-dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        .header3 {
+            width: 100%;
+            height: 70px;
+            padding: 0px 430px;
+            float: left;
+
+        }
+
+        .header3 ul {
+            list-style: none;
+            margin: 0;
+            padding-top: 30px;
+            display: flex;
+            height: 100%;
+            padding-left: 10px;
+            text-align: center;
+        }
+
+       
+        .header3 a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 8px 10px;
+            font-size: 20px;
+        }
+
+        .header3 a:hover {
+            color: red;
+        }
+        .header3 li {
+            position: relative;
+            z-index: 10;
+
+        }
+        .header3 li .menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: white;
+            padding: 10px;
+            border-radius: 5px;
+            min-width: 150px;
+        }
+
+        .header3 li:hover .menu {
+            display: block;
+        }
+
+        
+        .header3 li .menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: block; 
+        }
+
+        .header3 li .menu ul li {
+            padding: 8px 0;
+        }
+
+        .header3 li .menu ul li a {
+            color: black;
+            text-decoration: none;
+            display: block;
+        }
+
+        .header3 li .menu ul li a:hover {
+            color: red;
+        }
+        nav {
+            width: 100%;
+            overflow: hidden; 
+            margin: 20px 0;
+            width: 100%;
+            height: 300px;
+            padding: 20px 20px;
+            display: flex;
+        }
+
+        nav div {
+            display: inline-block;
+            animation: slide 30s linear infinite;
+            width: 50%;
+            border: 2px solid white;
+            margin: 10px 10px;
+            border-radius: 15px;
+        }
+
+        nav img {
+            border-radius: 15px;
+            width: 100%; 
+            height: 100%;
+            margin-right: 20px; 
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translateX(100%); 
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+         
+        .khungduoi{
+            float: left;
+            width: 100%;
+            height: 150px;
+            display: flex;
+            padding: 10px 10px;
+        }
+        .khungduoi a{
+            text-decoration: none;
+            color: red;
+        }
+        .khung1{
+            border-radius: 15px ;
+            padding: 40px 20px;
+            width: 20%;
+            text-align: center;
+            background-image: url(../JMG/khung1.jpg);
+
+        }
+        
+        .khungduoi img{
+            width: 30px;
+            border-radius: 6px solid;
+        }
+        .khung2{
+            border-radius: 15px ;
+            padding: 40px 20px;
+            width: 20%;
+            text-align: center;
+            background-image: url(../JMG/dongho2.jpg);
+
+        }
+        .khung3{
+            border-radius: 15px ;
+            padding: 40px 20px;
+            width: 20%;
+            text-align: center;
+            background-image: url(../JMG/khung3.jpg);
+        }
+        .khung1:hover{
+            background-image: url(../JMG/khung1_1.jpg);
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+            padding: 40px 20px;
+            width: 20%;
+            text-align: center; 
+        }
+        .khung2:hover {
+            padding: 40px 20px;
+            width: 20%;
+            text-align: center;
+            background-image: url(../JMG/khung2_2.jpg);
+            transform: scale(1.05);
+            transition: transform 0.3s ease; 
+        }
+        .khung3:hover {
+            padding: 40px 20px;
+            text-align: center;
+            transform: scale(1.05);
+            transition: transform 0.3s ease; 
+        }
+        .tip{
+            float: left;
+            width: 100%;
+            height: 550px;
+            padding: 10px 10px;
+        }
+        .tip h1{
+            border-top: 1px solid;
+            text-align: center;
+            padding: 10px 0px 0px 0px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: rgb(172, 160, 160);
+            
+        }
+        .tip .donghonam{
+            display: flex;
+            height: 500px;
+            width: 100%;
+            text-align: center;
+            padding: 10px 10px;
+        }
+       
+        .tip .donghonam img{
+            width: 100%;
+            height: 300px;
+        }
+        .tip .donghonam div{
+            border: 2px solid;
+            height: 400px;
+            margin: 10px 10px;
+            width: 100%;
+        }
+        .tip a{
+            text-decoration: none;
+
+        } 
+        .tip a p{
+            text-align: center;
+            width: 100%;
+            height: 100px;
+            color: white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+            
+        }
+        .tip a p span{
+            color: yellow;
+        }
+        .tip .donghonam img:hover{
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+        p:hover{
+            background-color: burlywood;
+
+            
+        }
+        .tip2{
+            float: left;
+            width: 100%;
+            height: 550px;
+            padding: 10px 10px;
+        }
+        .tip2 img{
+            width: 100%;
+            height: 300px;
+        }
+        .tip2 h1{
+            border-top: 1px solid;
+            text-align: center;
+            padding: 10px 0px 0px 0px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: rgb(172, 160, 160);
+        }
+        .tip2 .donghonu{
+            display: flex;
+            height: 500px;
+            width: 100%;
+            text-align: center;
+            padding: 10px 10px;
+
+        }
+        .tip2 .donghonu div{
+            border: 2px solid;
+            height: 400px;
+            margin: 10px 10px;
+            width: 100%;
+        }
+        .tip2 a{
+            text-decoration: none;
+
+        } 
+        .tip2 a p{
+            text-align: center;
+            width: 100%;
+            height: 100px;
+            color: white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            padding: 20px 20px;
+        }
+        .tip2 a p span{
+            color: yellow;
+        }
+        .tip2 .donghonu img:hover{
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+        footer {
+            color: #000;
+            width: 100%;
+            height: 300px;
+            background-color: #333;
+            padding: 20px 40px;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            color: white;
+            float: left;
+        }
+
+        .footertrong, .hotro, .links {
+            padding: 20px;
+            margin: 10px;
+            box-sizing: border-box;
+        }
+        .hotro a{
+            text-decoration: none;
+            color: white
+        }
+
+        .footertrong {
+            width: 30%;
+            float: left;
+        }
+
+        .hotro {
+            width: 30%;
+            float: left;
+        }
+        .hotro ul{
+            list-style: none;
+        }
+        .hotro a:hover{
+            color: red;
+        }
+        .links {
+            width: 30%;
+            float: right;
+        }
+        
+        .footertrong, .hotro, .links {
+            font-size: 18px;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        .cart-icon {
+            position: relative;
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background-color: red;
+            color: white;
+            font-size: 14px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .active a {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <div>
+            <div class="header1">
+                <h1>DEV VŨ <sub>Since 2005</sub></h1>
+            </div>
+            <div class="header2">
+                <ul>
+                    <li style="display: flex; align-items: center;">
+                        <form id="search-form" onsubmit="searchProduct(); return false;" style="display: flex;">
+                            <input type="text" id="search-input" placeholder="Tìm kiếm..." 
+                                   style="padding: 5px 10px; border-radius: 20px 0 0 20px; border: 1px solid #ccc; outline: none;">
+                            <button type="submit" 
+                                    style="padding: 5px 10px; border: none; background-color: gray; color: white; border-radius: 0 20px 20px 0; cursor: pointer;">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </form>
+                    </li>
+                    <li class="user-dropdown">
+                        <i class="fas fa-user"></i>
+                        <div class="dropdown-menu">
+                            <a href="../HTML/Đangnhap.html">Đăng Nhập</a>
+                            <a href="../HTML/Dangki.html">Đăng kí</a>
+                        </div>
+                    </li>
+                    <li class="cart-icon">
+                        <a href="../HTML/giohang.html"><i class="fas fa-shopping-cart"></i>
+                            <div class="cart-count" id="cart-count">0</div></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="header3">
+            <ul>
+                <li class="active"><a href="../HTML/Home.html">TRANG CHỦ</a></li>
+                <li>
+                    <a href="../HTML/Nam.html">NAM</a>
+                    <div class="menu">
+                        <ul>
+                            <li><a href="../HTML/patek1.html">Patek Philippe</a></li>
+                            <li><a href="../HTML/rolex1.html">Rolex</a></li>
+                            <li><a href="../HTML/timex1.html">Timex</a></li>
+                          </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="../HTML/Nu.html">NỮ</a>
+                    <div class="menu">
+                        <ul>
+                            <li><a href="../HTML/patek2.html">Patek Philippe</a></li>
+                            <li><a href="../HTML/rolex2.html">Rolex</a></li>
+                            <li><a href="../HTML/timex2.html">Timex</a></li>
+                          </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="../HTML/SinhVien.html">SINH VIÊN</a>
+                    <div class="menu">
+                        <ul>
+                            <li><a href="../HTML/patek3.html">Patek Philippe</a></li>
+                            <li><a href="../HTML/rolex3.html">Rolex</a></li>
+                            <li><a href="../HTML/timex3.html">Timex</a></li>
+                          </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="../HTML/CaoCap.html">CAO CẤP</a>
+                    <div class="menu">
+                        <ul>
+                            <li><a href="../HTML/patek4.html">Patek Philippe</a></li>
+                            <li><a href="../HTML/rolex4.html">Rolex</a></li>
+                            <li><a href="../HTML/timex4.html">Timex</a></li>
+                          </ul>
+                    </div>
+                </li>
+                <li><a href="../HTML/REVIEW.HTML">REVIEW</a></li>
+            </ul>
+        </div>
+    </header>
+    <nav>
+        <div>
+            <a href="../HTML/Patek_Philippe.html"><img src="../JMG/dongho1.jpg" alt="dongho1"></a>
+        </div>
+        <div>
+            <a href="../HTML/Rolex.html"><img src="../JMG/dongho22.jpg" alt="dongho2"></a>
+        </div>
+        <div>
+            <a href="../HTML/Timex.html"><img src="../JMG/dongho33.jpg" alt="dongho3"></a>
+        </div>
+    </nav>
+    <div class="khungduoi">
+        <div class="khung1">
+            <a href="../HTML/Patek_Philippe.html"><h1>Patek Philippe</h1></a>
+        </div>
+        <div class="khung2">
+            <a href="../HTML/Rolex.html"><h1>Rolex</h1></a>
+        </div>
+        <div class="khung3">
+            <a href="../HTML/Timex.html"><h1>TIMEX</h1></a>
+        </div>
+    </div>
+    <div class="tip">
+        <div>
+            <h1>ĐỒNG HỒ NAM BÁN CHẠY NHẤT</h1>
+        </div>
+        <div class="donghonam">
+            <div class="product">
+                <a href="../HTML/Patek_Philippe.html"><a href="../HTML/xemsanpham.html">
+                    <img src="../JMG/namchay1.jpg" alt="anh1">
+                    <p>Đồng hồ Patek Philippe Complications 5205R-010
+                        <br><span>1.550.000.000</span><sub>đ</sub>
+                    </p>
+                </a></a>
+            </div>
+            <div>
+                <a href="../HTML/xemsanpham1.html">
+                    <img src="../JMG/namchay2.jpg" alt="anh2">
+                    <p>Patek Philippe 5205R-001 Annual Calendar
+                        <br><span>1.240.000.000</span><sub>đ</sub>
+                    </p>
+                    </a>
+            </div>
+            <div>
+                <a href="../HTML/xemsanpham2.html">
+                    <img src="../JMG/namchay3.jpg" alt="anh3">
+                    <p>Đồng Hồ Rolex Oyster Perpetual Day-Date 36mm
+                        <br><span>1.010.000.000</span><sub>đ</sub>
+                    </p>
+                </a>
+            </div>
+            <div>
+                <a href="../HTML/xemsanpham3.html">
+                    <img src="../JMG/donghonupar1.jpg" alt="anh1">
+                    <p>Đồng hồ Rolex 2000B
+                        <br><span>820.000.000</span><sub>đ</sub>
+                     </p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="tip2">
+        <div>
+            <h1>ĐỒNG HỒ NỮ BÁN CHẠY NHẤT</h1>
+        </div>
+        <div class="donghonu">
+            <div class="product">
+                <a href="../HTML/Rolex.html"><a href="../HTML/xemsanpham4.html">
+                    <img src="../JMG/parknu1.jpg" alt="anh1">
+                    <p>Đồng hồ Patek Philippe Aquanaut 5067A-011 Luce Pure White Ladies Watch
+                        <br><span>720.000.000</span><sub>đ</sub>
+                     </p>
+                </a></a>
+            </div>
+            <div>
+                <a href="../HTML/xemsanpham5.html"><img src="../JMG/rolex2.jpg" alt="anh2">
+                    <p>Đồng hồ Rolex 6000B
+                        <br><span>65.000.000</span><sub>đ</sub>
+                     </p>
+            </div>
+            <div>
+                <a href="../HTML/xemsanpham6.html">
+                    <img src="../JMG/rolex3.jpg" alt="anh3">
+                    <p>Đồng hồ Rolex 5000
+                        <br><span>50.000.000</span><sub>đ</sub>
+                     </p>
+                </a>
+            </div>
+            <div>
+                <a href="../HTML/xemsanpham7.htm">
+                    <img src="../JMG/rolex6.jpg" alt="anh4">
+                    <p>Rolex Oyster Perpetual Day-Date 36mm 128238-010 dây đeo President
+                       <br><span>810.000.000</span><sub>đ</sub>
+                    </p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="tip2">
+        <div>
+            <h1>ĐỒNG HỒ SINH VIÊN BÁN CHẠY NHẤT</h1>
+        </div>
+        <div class="donghonu">
+            <div class="product">
+                <a href="../HTML/Timex.html"><a href="../HTML/xemsanpham8.html">
+                    <img src="../JMG/tim1.jpg" alt="anh1">
+                    <p>Đồng hồ TIMEX 200B
+                        <br><span>200.000</span><sub>đ</sub>
+                    </p>
+                </a></a>
+            </div>
+            <div>
+                <a href="../HTML/xemsanpham9.html">
+                    <img src="../JMG/timnu3.jpg" alt="anh3">
+                    <p>Đồng hồ TIMEX pro
+                       <br> <span>3.500.000</span><sub>đ</sub>
+                    </p>
+                </a>
+            </div>
+            <div>
+                <a href="../HTML/xemsanpham10.html">
+                    <img src="../JMG/timnu1.jpg" alt="anh1">
+                    <p>Đồng hồ TIMEX 2000B
+                        <br><span>1.000.000</span><sub>đ</sub>
+                    </p>
+                </a>
+            </div>
+            <div>
+                <a href="../HTML/xemsanpham11.html">
+                    <img src="../JMG/tim7.jpg" alt="anh3">
+                    <p>Đồng hồ TIMEX 39mm
+                        <br><span>600.000</span><sub>đ</sub>
+                    </p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="dichvu">
+
+    </div>
+    <footer>
+        <div class="footer1">
+            <div class="footertrong">
+                <p>© 2025 - 2027 DEV VU <sub>2005</sub></p>
+                <p>MST: 0977742976 - Sở kế hoạch và Đầu tư Trường Đại Học Công Nghiệp TP.HCM</p>
+                <p>Address: Gò Vấp, TP. HCM, Vietnam</p>
+                <p>Email: nguyencongvu2102@gmail.com | Phone: 0977742976</p>
+            </div>
+    
+            <div class="hotro">
+                <h3>Hỗ trợ khách hàng</h3>
+                <ul>
+                    <li><a href="../HTML/hchinhsachthanhtoan.html">Chính sách thanh toán</a></li>
+                    <li><a href="../HTML/chinhsachgiaohang.html">Chính sách giao hàng</a></li>
+                    <li><a href="../HTML/chinhsachdoitra.html">Chính sách đổi trả</a></li>
+                    <li><a href="../HTML/chinhsachbaohanh.html">Chính sách bảo hành</a></li>
+                </ul>
+            </div>
+            <div class="links">
+                <h3>Kết nối với chúng tôi</h3>
+                <a href="https://www.facebook.com" target="_blank">
+                    <i class="fab fa-facebook-square" style="font-size: 30px; margin-right: 10px;"></i>
+                </a>
+                <a href="https://www.instagram.com" target="_blank">
+                    <i class="fab fa-instagram" style="font-size: 30px; margin-right: 10px;"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="../javascrip/bai2.js"></script>
+    <script src="../javascrip/bai6.js"></script>
+</body>
+</html>
